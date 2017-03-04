@@ -1,0 +1,45 @@
+<ion-view view-title="Chats">
+  <ion-content>
+    <h1>{{obj_choice.choice}}</h1>
+    <ion-radio ng-repeat="iteam in obj_radioData" ng-value="iteam" ng-model="obj_choice.choice">{{iteam}}</ion-radio>
+    <ion-checkbox ng-repeat="item in obj_checkboxData" ng-model="item.isSelect">{{item.name}}</ion-checkbox>
+    <ion-list>
+      <ion-item>1
+        <ion-option-button class="assertive-bg">删除</ion-option-button>
+      </ion-item>
+      <ion-item>2
+      <ion-checkbox ng-checked="true">中国</ion-checkbox>
+      <ion-checkbox>美国</ion-checkbox>
+      <ion-checkbox>德国</ion-checkbox>
+      <ion-checkbox>英国</ion-checkbox>
+      </ion-item>
+      <ion-item>
+      <!--开关按钮-->
+        开关的状态是{{kg}}
+        <ion-toggle ng-model="kg">开关按钮</ion-toggle>
+      </ion-item>
+      <ion-item>4</ion-item>
+      <ion-item>5</ion-item>
+      <!--<ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>-->
+    </ion-list>
+    <ion-list show-delete="shouldShowDelete">
+      <ion-item>
+        <ion-delete-button class="ion-minus-circled"></ion-delete-button>
+        Hello, 列表项!
+      </ion-item>
+    </ion-list>
+    <ion-toggle ng-model="shouldShowDelete">
+      显示删除?
+    </ion-toggle>
+
+  </ion-content>
+</ion-view>
